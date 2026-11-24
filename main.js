@@ -19,39 +19,24 @@
     a.addEventListener('click', () => track(a.dataset.wa));
   });
 
-  // ===== Header + FAB =====
+  // ===== Header + botão flutuante =====
   const hdr = document.querySelector('.hdr');
   const fab = document.querySelector('.fab');
-  const hero = document.querySelector('.hero');
-
-  // ===== Trena: números + movimento com o scroll =====
-  const track$ = document.querySelector('.tape__track');
-  for (let cm = 0; cm <= 300; cm += 5) {
-    const s = document.createElement('span');
-    s.textContent = cm;
-    if (cm % 10 === 0) { s.style.left = (cm * 10) + 'px'; if (cm % 50 === 0) s.className = 'r'; track$.appendChild(s); }
-  }
-  track$.style.width = '3020px';
-
+  const ftr = document.querySelector('.ftr');
   const onScroll = () => {
     const y = scrollY;
-    hdr.classList.toggle('is-solid', y > hero.offsetHeight - 90);
+    hdr.classList.toggle('is-scrolled', y > 8);
     fab.classList.toggle('on', y > 500);
-    fab.classList.toggle('off', y + innerHeight > document.querySelector('.ftr').offsetTop + 80);
-    if (!reduce) track$.style.transform = `translateX(${-(y * 0.35) % 1000}px)`;
+    fab.classList.toggle('off', y + innerHeight > ftr.offsetTop + 80);
   };
   addEventListener('scroll', onScroll, { passive: true }); onScroll();
 
-  // ===== Carrossel de projetos =====
+  // ===== Carrossel =====
   const rail = document.getElementById('rail');
   const cards = [...rail.querySelectorAll('.p')];
-  const cur = document.getElementById('wCur');
   const prev = document.getElementById('wPrev'), next = document.getElementById('wNext');
-  document.getElementById('wTot').textContent = String(cards.length).padStart(2, '0');
   const step = () => cards[0].getBoundingClientRect().width + 20;
   const update = () => {
-    const i = Math.round(rail.scrollLeft / step());
-    cur.textContent = String(Math.min(i + 1, cards.length)).padStart(2, '0');
     prev.disabled = rail.scrollLeft < 4;
     next.disabled = rail.scrollLeft + rail.clientWidth >= rail.scrollWidth - 4;
   };
@@ -60,7 +45,6 @@
   next.addEventListener('click', () => rail.scrollBy({ left: step(), behavior: reduce ? 'auto' : 'smooth' }));
   rail.addEventListener('keydown', e => { if (e.key === 'ArrowRight') next.click(); if (e.key === 'ArrowLeft') prev.click(); });
 
-  // arrastar com o mouse
   let down = false, sx = 0, sl = 0, moved = false;
   rail.addEventListener('pointerdown', e => { if (e.pointerType !== 'mouse') return; down = true; moved = false; sx = e.clientX; sl = rail.scrollLeft; });
   addEventListener('pointermove', e => { if (!down) return; const d = e.clientX - sx; if (Math.abs(d) > 5) { moved = true; rail.classList.add('is-drag'); } rail.scrollLeft = sl - d; });
@@ -73,8 +57,7 @@
   const show = i => {
     at = (i + cards.length) % cards.length;
     const c = cards[at], img = c.querySelector('img');
-    lbImg.src = img.src; lbImg.alt = img.alt; lbCap.textContent = c.dataset.title;
-    lbTag.textContent = `Ref. ${String(at + 1).padStart(2, '0')} · ${c.dataset.tag}`;
+    lbImg.src = img.src; lbImg.alt = img.alt; lbCap.textContent = c.dataset.title; lbTag.textContent = c.dataset.tag;
     lbWa.href = waUrl(MSG.project(c.dataset.title));
     lbWa.onclick = () => track('lightbox', { project: c.dataset.title });
   };
@@ -93,7 +76,7 @@
   lb.addEventListener('touchend', e => { const d = e.changedTouches[0].clientX - tx; if (Math.abs(d) > 50) show(at + (d < 0 ? 1 : -1)); });
 
   // ===== Reveal =====
-  const els = document.querySelectorAll('.title, .story__copy p, .story__media, .specs li, .steps li, .cta__copy');
+  const els = document.querySelectorAll('.title, .story__copy p, .story__media, .perks li, .steps-head, .cta__box');
   if ('IntersectionObserver' in window && !reduce) {
     els.forEach(el => el.classList.add('rv'));
     const io = new IntersectionObserver(es => es.forEach(en => {
