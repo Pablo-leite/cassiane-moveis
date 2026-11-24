@@ -3,17 +3,17 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Cassiane Móveis · Móveis Planejados em Dourados-MS</title>
-<meta name="description" content="Móveis planejados sob medida em Dourados-MS: cozinhas, dormitórios, closets, salas e painéis. Fabricação própria. Peça seu orçamento pelo WhatsApp.">
+<title>Cassiane Móveis · Móveis Planejados sob Medida em Dourados-MS</title>
+<meta name="description" content="Do projeto ao móvel: cozinhas, dormitórios, closets e salas planejados sob medida, com fabricação própria em Dourados-MS. Peça seu orçamento pelo WhatsApp.">
 <meta name="theme-color" content="#1d2aa0">
-<meta property="og:title" content="Cassiane Móveis · Móveis Planejados em Dourados-MS">
-<meta property="og:description" content="Fabricação própria de móveis planejados sob medida. Peça seu orçamento pelo WhatsApp.">
+<meta property="og:title" content="Cassiane Móveis · Do projeto ao móvel">
+<meta property="og:description" content="Móveis planejados sob medida com fabricação própria em Dourados-MS.">
 <meta property="og:image" content="img/painel-led.jpg">
 <meta property="og:type" content="website">
 <link rel="icon" href="img/logo-cm.png" type="image/png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FurnitureStore","name":"Cassiane Móveis","description":"Móveis planejados sob medida em Dourados-MS.","telephone":"+55-67-98129-2953","email":"cassianemoveis@hotmail.com.br","address":{"@type":"PostalAddress","streetAddress":"Rua General Osório, 1145 - Jardim Cuiabazinho","addressLocality":"Dourados","addressRegion":"MS","addressCountry":"BR"},"sameAs":["https://www.instagram.com/cm_cassiane_moveis/","https://www.facebook.com/cassianemoveis"]}
@@ -22,20 +22,20 @@
 <body>
 <a class="skip" href="#conteudo">Pular para o conteúdo</a>
 
-<header class="header" id="topo">
-  <div class="container header__in">
-    <a href="#topo" class="brand" aria-label="Cassiane Móveis — início">
-      <img src="img/logo-cm.png" alt="" width="558" height="552" class="brand__logo">
-      <span class="brand__name">Cassiane <b>Móveis</b><small>Móveis planejados</small></span>
+<!-- HEADER -->
+<header class="hdr" id="topo">
+  <div class="wrap hdr__in">
+    <a href="#topo" class="logo" aria-label="Cassiane Móveis, início">
+      <span class="logo__chip"><img src="img/logo-cm.png" alt="" width="558" height="552"></span>
+      <span class="logo__txt">Cassiane Móveis<small>Planejados sob medida</small></span>
     </a>
-    <nav class="nav" aria-label="Navegação principal">
-      <a href="#historia">Nossa história</a>
-      <a href="#projetos">Projetos</a>
-      <a href="#como-funciona">Como funciona</a>
-      <a href="#contato">Contato</a>
+    <nav class="hdr__nav" aria-label="Navegação principal">
+      <a href="#historia"><span class="mono">01</span>História</a>
+      <a href="#projetos"><span class="mono">02</span>Projetos</a>
+      <a href="#processo"><span class="mono">03</span>Processo</a>
     </nav>
-    <a class="btn btn--wa btn--sm header__cta" data-wa="header" href="#" target="_blank" rel="noopener">
-      <svg class="i" aria-hidden="true"><use href="#i-wa"/></svg><span>Fazer orçamento</span>
+    <a class="btn btn--wa btn--sm" data-wa="header" href="#" target="_blank" rel="noopener">
+      <span class="btn__ico"><svg class="i" aria-hidden="true"><use href="#i-wa"/></svg></span><span class="btn__txt">Orçamento</span>
     </a>
   </div>
 </header>
@@ -44,199 +44,176 @@
 
 <!-- HERO -->
 <section class="hero">
-  <div class="container hero__grid">
+  <div class="hero__plan" aria-hidden="true"></div>
+  <div class="wrap hero__grid">
     <div class="hero__copy">
-      <span class="pill"><span class="pill__dot"></span>Fabricação própria em Dourados-MS</span>
-      <h1>Móveis <span class="hl">planejados</span> do jeito que a sua casa merece</h1>
-      <p class="hero__lead">Cozinhas, dormitórios, closets e salas feitos sob medida, com acabamento de alto padrão e montagem pela nossa equipe. Mande uma foto do ambiente e receba seu orçamento pelo WhatsApp.</p>
-      <div class="hero__ctas">
+      <p class="tag"><span class="mono">PRJ · 001</span> Marcenaria em Dourados-MS</p>
+      <h1 class="hero__title">
+        <span class="hero__lead">Móveis planejados</span>
+        <span class="hero__key">sob<br>medida<span class="dot">.</span></span>
+      </h1>
+      <p class="hero__sub">Cozinhas, dormitórios, closets e salas desenhados para o seu espaço e fabricados na nossa marcenaria. <b>Do projeto ao móvel montado.</b></p>
+      <div class="hero__actions">
         <a class="btn btn--wa btn--lg" data-wa="hero" href="#" target="_blank" rel="noopener">
-          <svg class="i" aria-hidden="true"><use href="#i-wa"/></svg><span>Quero meu orçamento</span>
+          <span class="btn__ico"><svg class="i" aria-hidden="true"><use href="#i-wa"/></svg></span><span class="btn__txt">Pedir orçamento no WhatsApp</span>
         </a>
-        <a class="btn btn--outline btn--lg" href="#projetos"><span>Ver projetos</span><svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        <a class="link" href="#projetos">Ver projetos <svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></a>
       </div>
-      <ul class="checks">
-        <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>100% sob medida</li>
-        <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Fabricação própria</li>
-        <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Montagem inclusa</li>
-      </ul>
     </div>
 
-    <div class="hero__media">
-      <div class="hero__img hero__img--main"><img src="img/painel-led.jpg" alt="Painel de TV com ripado amadeirado e iluminação em LED" width="960" height="1280" fetchpriority="high"></div>
-      <div class="hero__img hero__img--2"><img src="img/cozinha-azul.jpg" alt="Cozinha planejada azul com aéreos amadeirados" width="960" height="1280"></div>
-      <div class="hero__img hero__img--3"><img src="img/closet.jpg" alt="Closet planejado com iluminação" width="960" height="1280"></div>
-      <div class="float-card float-card--a">
-        <span class="float-card__ico"><svg class="i" aria-hidden="true"><use href="#i-ruler"/></svg></span>
-        <span><b>Sob medida</b><small>Cada centímetro aproveitado</small></span>
-      </div>
-      <div class="float-card float-card--b">
-        <img src="img/logo-cm.png" alt="" width="558" height="552">
-        <span><b>Do projeto à montagem</b><small>Feito por quem fabrica</small></span>
-      </div>
-    </div>
+    <figure class="hero__photo">
+      <img src="img/painel-led.jpg" alt="Painel de TV planejado com ripado amadeirado e LED, feito pela Cassiane Móveis" width="960" height="1280" fetchpriority="high">
+      <!-- cotas de projeto sobre a foto -->
+      <svg class="dims" viewBox="0 0 100 130" preserveAspectRatio="none" aria-hidden="true">
+        <g class="dim dim--h">
+          <line x1="8" y1="7" x2="92" y2="7"/>
+          <line x1="8" y1="4.5" x2="8" y2="9.5"/><line x1="92" y1="4.5" x2="92" y2="9.5"/>
+        </g>
+        <g class="dim dim--v">
+          <line x1="95" y1="14" x2="95" y2="96"/>
+          <line x1="92.5" y1="14" x2="97.5" y2="14"/><line x1="92.5" y1="96" x2="97.5" y2="96"/>
+        </g>
+      </svg>
+      <span class="dim-label dim-label--h">LARGURA SOB MEDIDA</span>
+      <span class="dim-label dim-label--v">ATÉ O TETO</span>
+      <figcaption class="hero__cap"><span class="mono">REF. 01</span>Painel ripado com LED</figcaption>
+    </figure>
   </div>
 </section>
 
+<!-- RÉGUA -->
+<div class="tape" aria-hidden="true"><div class="tape__track"></div></div>
+
 <!-- HISTÓRIA -->
-<section class="section" id="historia">
-  <div class="container story">
-    <div class="story__media">
-      <img src="img/suite-ripada.jpg" alt="Suíte com parede ripada fabricada pela Cassiane Móveis" loading="lazy" width="960" height="1280">
-      <div class="story__badge"><img src="img/logo-cm.png" alt="" width="558" height="552"><span>Marcenaria<br><b>Dourados-MS</b></span></div>
-    </div>
+<section class="story" id="historia">
+  <div class="wrap story__grid">
     <div class="story__copy">
-      <span class="eyebrow">Nossa história</span>
-      <h2>Nascemos na marcenaria, <span class="hl">com a mão na madeira</span></h2>
-      <p>A Cassiane Móveis começou como uma marcenaria de bairro em Dourados, com um jeito simples de trabalhar: ouvir o cliente, medir com cuidado e entregar o móvel exatamente como foi combinado.</p>
-      <p>Hoje projetamos e fabricamos ambientes completos, de cozinhas a closets, mas o cuidado continua o mesmo. Quem desenha o seu projeto é quem fabrica e monta, sem intermediários.</p>
-      <div class="features">
-        <div class="feature"><span class="feature__ico"><svg class="i" aria-hidden="true"><use href="#i-factory"/></svg></span><div><h3>Fabricação própria</h3><p>Produzido na nossa marcenaria.</p></div></div>
-        <div class="feature"><span class="feature__ico"><svg class="i" aria-hidden="true"><use href="#i-ruler"/></svg></span><div><h3>100% sob medida</h3><p>Feito para o seu espaço.</p></div></div>
-        <div class="feature"><span class="feature__ico"><svg class="i" aria-hidden="true"><use href="#i-spark"/></svg></span><div><h3>Acabamento premium</h3><p>Ripados, LED e portas camufladas.</p></div></div>
-        <div class="feature"><span class="feature__ico"><svg class="i" aria-hidden="true"><use href="#i-chat"/></svg></span><div><h3>Atendimento direto</h3><p>Você fala com quem faz.</p></div></div>
-      </div>
+      <p class="tag tag--dark"><span class="mono">01</span> Nossa história</p>
+      <h2 class="title"><span class="title__lead">Nascemos na</span><span class="title__key">marcenaria.</span></h2>
+      <p>A Cassiane Móveis começou com o jeito mais simples de trabalhar: ouvir o cliente, medir com cuidado e entregar o móvel exatamente como foi combinado.</p>
+      <p>Hoje projetamos ambientes completos, mas a regra continua a mesma: <b>quem desenha é quem fabrica e monta.</b></p>
     </div>
+    <div class="story__media">
+      <figure class="story__a"><img src="img/suite-ripada.jpg" alt="Suíte com parede ripada" loading="lazy" width="960" height="1280"></figure>
+      <figure class="story__b"><img src="img/closet.jpg" alt="Closet planejado com LED" loading="lazy" width="960" height="1280"></figure>
+    </div>
+    <ul class="specs">
+      <li><span class="mono">A</span><b>Fabricação própria</b><small>Produzido na nossa marcenaria</small></li>
+      <li><span class="mono">B</span><b>100% sob medida</b><small>Nenhum módulo pronto</small></li>
+      <li><span class="mono">C</span><b>Acabamento premium</b><small>Ripados, LED, portas camufladas</small></li>
+      <li><span class="mono">D</span><b>Atendimento direto</b><small>Você fala com quem faz</small></li>
+    </ul>
   </div>
 </section>
 
 <!-- PROJETOS -->
-<section class="section section--gray" id="projetos">
-  <div class="container">
-    <div class="head head--row">
-      <div>
-        <span class="eyebrow">Portfólio</span>
-        <h2>Projetos <span class="hl">entregues</span></h2>
-      </div>
-      <div class="filters" role="group" aria-label="Filtrar projetos">
-        <button class="filter is-on" data-f="all" aria-pressed="true">Todos</button>
-        <button class="filter" data-f="cozinha" aria-pressed="false">Cozinhas</button>
-        <button class="filter" data-f="quarto" aria-pressed="false">Quartos e closets</button>
-        <button class="filter" data-f="sala" aria-pressed="false">Salas</button>
-      </div>
+<section class="work" id="projetos">
+  <div class="wrap work__head">
+    <div>
+      <p class="tag tag--light"><span class="mono">02</span> Projetos entregues</p>
+      <h2 class="title title--light"><span class="title__lead">Do papel para</span><span class="title__key">a sua casa.</span></h2>
     </div>
+    <div class="work__ctrl">
+      <span class="mono work__count"><b id="wCur">01</b> / <span id="wTot">10</span></span>
+      <button class="sq" id="wPrev" aria-label="Projeto anterior"><svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+      <button class="sq" id="wNext" aria-label="Próximo projeto"><svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+    </div>
+  </div>
 
-    <div class="gallery" id="gallery">
-      <button class="g g--big" data-cat="cozinha" data-title="Cozinha azul com madeirado" data-tag="Cozinha"><img src="img/cozinha-azul.jpg" alt="Cozinha azul com aéreos amadeirados" loading="lazy" width="960" height="1280" style="object-position:50% 10%"><span class="g__info"><small>Cozinha</small>Cozinha azul com madeirado</span><span class="g__zoom"><svg class="i" aria-hidden="true"><use href="#i-zoom"/></svg></span></button>
-      <button class="g" data-cat="sala" data-title="Painel ripado com LED" data-tag="Sala"><img src="img/painel-led.jpg" alt="Painel ripado com LED" loading="lazy" width="960" height="1280" style="object-position:50% 25%"><span class="g__info"><small>Sala</small>Painel ripado com LED</span><span class="g__zoom"><svg class="i" aria-hidden="true"><use href="#i-zoom"/></svg></span></button>
-      <button class="g" data-cat="quarto" data-title="Closet em L iluminado" data-tag="Closet"><img src="img/closet.jpg" alt="Closet em L" loading="lazy" width="960" height="1280"><span class="g__info"><small>Closet</small>Closet em L iluminado</span><span class="g__zoom"><svg class="i" aria-hidden="true"><use href="#i-zoom"/></svg></span></button>
-      <button class="g" data-cat="sala" data-title="Rack ripado de cantos curvos" data-tag="Sala"><img src="img/home-theater.jpg" alt="Rack ripado de cantos curvos" loading="lazy" width="960" height="1280"><span class="g__info"><small>Sala</small>Rack ripado de cantos curvos</span><span class="g__zoom"><svg class="i" aria-hidden="true"><use href="#i-zoom"/></svg></span></button>
-      <button class="g" data-cat="cozinha" data-title="Cozinha fendi até o teto" data-tag="Cozinha"><img src="img/cozinha-cinza.jpg" alt="Cozinha fendi" loading="lazy" width="960" height="1280"><span class="g__info"><small>Cozinha</small>Cozinha fendi até o teto</span><span class="g__zoom"><svg class="i" aria-hidden="true"><use href="#i-zoom"/></svg></span></button>
-      <button class="g g--big" data-cat="quarto" data-title="Quarto ripado com porta oculta" data-tag="Quarto"><img src="img/dormitorio-ripado.jpg" alt="Quarto ripado com porta oculta" loading="lazy" width="960" height="1280" style="object-position:50% 45%"><span class="g__info"><small>Quarto</small>Quarto ripado com porta oculta</span><span class="g__zoom"><svg class="i" aria-hidden="true"><use href="#i-zoom"/></svg></span></button>
-      <button class="g" data-cat="sala" data-title="Cristaleira em vidro" data-tag="Área social"><img src="img/cristaleira.jpg" alt="Cristaleira em vidro" loading="lazy" width="960" height="1280"><span class="g__info"><small>Área social</small>Cristaleira em vidro</span><span class="g__zoom"><svg class="i" aria-hidden="true"><use href="#i-zoom"/></svg></span></button>
-      <button class="g" data-cat="cozinha" data-title="Cozinha verde sálvia" data-tag="Cozinha"><img src="img/cozinha-verde.jpg" alt="Cozinha verde sálvia" loading="lazy" width="960" height="1280" style="object-position:50% 70%"><span class="g__info"><small>Cozinha</small>Cozinha verde sálvia</span><span class="g__zoom"><svg class="i" aria-hidden="true"><use href="#i-zoom"/></svg></span></button>
-      <button class="g" data-cat="quarto" data-title="Guarda-roupa de correr" data-tag="Quarto"><img src="img/dormitorio-guarda-roupa.jpg" alt="Guarda-roupa de correr" loading="lazy" width="960" height="1280"><span class="g__info"><small>Quarto</small>Guarda-roupa de correr</span><span class="g__zoom"><svg class="i" aria-hidden="true"><use href="#i-zoom"/></svg></span></button>
-      <button class="g" data-cat="quarto" data-title="Suíte com parede ripada" data-tag="Quarto"><img src="img/suite-ripada.jpg" alt="Suíte com parede ripada" loading="lazy" width="960" height="1280"><span class="g__info"><small>Quarto</small>Suíte com parede ripada</span><span class="g__zoom"><svg class="i" aria-hidden="true"><use href="#i-zoom"/></svg></span></button>
-    </div>
+  <div class="rail" id="rail" tabindex="0" aria-label="Galeria de projetos, role para os lados">
+    <button class="p" data-title="Cozinha azul com madeirado" data-tag="Cozinha"><span class="p__img"><img src="img/cozinha-azul.jpg" alt="Cozinha azul com aéreos amadeirados" loading="eager" width="960" height="1280"></span><span class="p__cap"><span class="mono">REF. 01 · COZINHA</span>Cozinha azul com madeirado</span></button>
+    <button class="p" data-title="Closet em L iluminado" data-tag="Closet"><span class="p__img"><img src="img/closet.jpg" alt="Closet em L com LED" loading="eager" width="960" height="1280"></span><span class="p__cap"><span class="mono">REF. 02 · CLOSET</span>Closet em L iluminado</span></button>
+    <button class="p" data-title="Suíte com parede ripada" data-tag="Quarto"><span class="p__img"><img src="img/suite-ripada.jpg" alt="Suíte com parede ripada" loading="eager" width="960" height="1280"></span><span class="p__cap"><span class="mono">REF. 03 · QUARTO</span>Suíte com parede ripada</span></button>
+    <button class="p" data-title="Rack ripado de cantos curvos" data-tag="Sala"><span class="p__img"><img src="img/home-theater.jpg" alt="Rack ripado de cantos curvos" loading="lazy" width="960" height="1280"></span><span class="p__cap"><span class="mono">REF. 04 · SALA</span>Rack ripado de cantos curvos</span></button>
+    <button class="p" data-title="Cozinha fendi até o teto" data-tag="Cozinha"><span class="p__img"><img src="img/cozinha-cinza.jpg" alt="Cozinha fendi" loading="lazy" width="960" height="1280"></span><span class="p__cap"><span class="mono">REF. 05 · COZINHA</span>Cozinha fendi até o teto</span></button>
+    <button class="p" data-title="Quarto ripado com porta oculta" data-tag="Quarto"><span class="p__img"><img src="img/dormitorio-ripado.jpg" alt="Quarto ripado com porta oculta" loading="lazy" width="960" height="1280"></span><span class="p__cap"><span class="mono">REF. 06 · QUARTO</span>Quarto ripado com porta oculta</span></button>
+    <button class="p" data-title="Painel ripado com LED" data-tag="Sala"><span class="p__img"><img src="img/painel-led.jpg" alt="Painel ripado com LED" loading="lazy" width="960" height="1280"></span><span class="p__cap"><span class="mono">REF. 07 · SALA</span>Painel ripado com LED</span></button>
+    <button class="p" data-title="Cristaleira em vidro" data-tag="Área social"><span class="p__img"><img src="img/cristaleira.jpg" alt="Cristaleira em vidro" loading="lazy" width="960" height="1280"></span><span class="p__cap"><span class="mono">REF. 08 · ÁREA SOCIAL</span>Cristaleira em vidro</span></button>
+    <button class="p" data-title="Cozinha verde sálvia" data-tag="Cozinha"><span class="p__img"><img src="img/cozinha-verde.jpg" alt="Cozinha verde sálvia" loading="lazy" width="960" height="1280"></span><span class="p__cap"><span class="mono">REF. 09 · COZINHA</span>Cozinha verde sálvia</span></button>
+    <button class="p" data-title="Guarda-roupa de correr" data-tag="Quarto"><span class="p__img"><img src="img/dormitorio-guarda-roupa.jpg" alt="Guarda-roupa de correr" loading="lazy" width="960" height="1280"></span><span class="p__cap"><span class="mono">REF. 10 · QUARTO</span>Guarda-roupa de correr</span></button>
+  </div>
 
-    <div class="center-cta">
-      <a class="btn btn--wa btn--lg" data-wa="portfolio" href="#" target="_blank" rel="noopener"><svg class="i" aria-hidden="true"><use href="#i-wa"/></svg><span>Quero um projeto assim</span></a>
-      <a class="btn btn--ghost btn--lg" href="https://www.instagram.com/cm_cassiane_moveis/" target="_blank" rel="noopener"><svg class="i" aria-hidden="true"><use href="#i-ig"/></svg><span>Ver mais no Instagram</span></a>
-    </div>
+  <div class="wrap work__foot">
+    <a class="btn btn--wa btn--lg" data-wa="projetos" href="#" target="_blank" rel="noopener"><span class="btn__ico"><svg class="i" aria-hidden="true"><use href="#i-wa"/></svg></span><span class="btn__txt">Quero um projeto assim</span></a>
+    <a class="link link--light" href="https://www.instagram.com/cm_cassiane_moveis/" target="_blank" rel="noopener">Mais no Instagram <svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></a>
   </div>
 </section>
 
-<!-- COMO FUNCIONA -->
-<section class="section section--navy" id="como-funciona">
-  <div class="container">
-    <div class="head head--center">
-      <span class="eyebrow eyebrow--light">Como funciona</span>
-      <h2>Simples, do primeiro contato ao <span class="hl hl--light">móvel montado</span></h2>
+<!-- PROCESSO -->
+<section class="process" id="processo">
+  <div class="wrap">
+    <div class="process__head">
+      <p class="tag tag--dark"><span class="mono">03</span> Processo</p>
+      <h2 class="title"><span class="title__lead">Quatro passos até o</span><span class="title__key">móvel montado.</span></h2>
     </div>
     <ol class="steps">
-      <li><span class="steps__n">1</span><h3>Fale no WhatsApp</h3><p>Conte o que precisa e mande fotos ou a planta do ambiente.</p></li>
-      <li><span class="steps__n">2</span><h3>Medição no local</h3><p>Vamos até você conferir as medidas e os detalhes da obra.</p></li>
-      <li><span class="steps__n">3</span><h3>Projeto e orçamento</h3><p>Você aprova cores, acabamentos e valor antes de começar.</p></li>
-      <li><span class="steps__n">4</span><h3>Fabricação e montagem</h3><p>Produzimos e instalamos tudo com a nossa própria equipe.</p></li>
+      <li><span class="steps__n mono">01</span><h3>Conversa</h3><p>Fale no WhatsApp e mande fotos ou a planta do ambiente.</p></li>
+      <li><span class="steps__n mono">02</span><h3>Medição</h3><p>Vamos até você conferir cada medida e detalhe da obra.</p></li>
+      <li><span class="steps__n mono">03</span><h3>Projeto</h3><p>Você aprova cores, acabamentos e valor antes de começar.</p></li>
+      <li class="steps__last"><span class="steps__n mono">04</span><h3>Montagem</h3><p>Fabricamos e instalamos com a nossa própria equipe.</p></li>
     </ol>
   </div>
 </section>
 
-<!-- CTA FINAL -->
-<section class="final">
-  <div class="container">
-    <div class="final__box">
-      <div class="final__img" aria-hidden="true"><img src="img/cozinha-cinza.jpg" alt="" loading="lazy" width="960" height="1280"></div>
-      <div class="final__copy">
-        <h2>Pronto para ter o ambiente dos seus sonhos?</h2>
-        <p>Chame agora no WhatsApp, mande uma foto do espaço e receba o seu orçamento.</p>
-        <a class="btn btn--wa btn--xl" data-wa="final" href="#" target="_blank" rel="noopener"><svg class="i" aria-hidden="true"><use href="#i-wa"/></svg><span>Pedir orçamento agora</span></a>
-      </div>
+<!-- CTA -->
+<section class="cta" id="contato">
+  <div class="cta__plan" aria-hidden="true"></div>
+  <div class="wrap cta__grid">
+    <div class="cta__copy">
+      <h2 class="title title--light"><span class="title__lead">Vamos tirar o seu</span><span class="title__key">projeto do papel?</span></h2>
+      <p>Mande uma foto do ambiente no WhatsApp e receba o seu orçamento.</p>
+      <a class="btn btn--wa btn--xl" data-wa="final" href="#" target="_blank" rel="noopener"><span class="btn__ico"><svg class="i" aria-hidden="true"><use href="#i-wa"/></svg></span><span class="btn__txt">Falar no WhatsApp</span></a>
     </div>
+    <figure class="cta__photo"><img src="img/home-theater.jpg" alt="Painel de TV com rack ripado" loading="lazy" width="960" height="1280"></figure>
   </div>
 </section>
 </main>
 
-<footer class="footer" id="contato">
-  <div class="container footer__grid">
-    <div class="footer__brand">
-      <span class="footer__logo"><img src="img/logo-cm.png" alt="Cassiane Móveis" width="558" height="552"><span>Cassiane <b>Móveis</b></span></span>
-      <p>Móveis planejados sob medida com fabricação própria em Dourados-MS.</p>
-      <div class="social">
-        <a href="https://www.instagram.com/cm_cassiane_moveis/" target="_blank" rel="noopener" aria-label="Instagram"><svg class="i" aria-hidden="true"><use href="#i-ig"/></svg></a>
-        <a href="https://www.facebook.com/cassianemoveis" target="_blank" rel="noopener" aria-label="Facebook"><svg class="i" aria-hidden="true"><use href="#i-fb"/></svg></a>
-        <a data-wa="footer-social" href="#" target="_blank" rel="noopener" aria-label="WhatsApp"><svg class="i" aria-hidden="true"><use href="#i-wa"/></svg></a>
-      </div>
+<footer class="ftr">
+  <div class="wrap ftr__grid">
+    <a href="#topo" class="logo logo--ftr" aria-label="Voltar ao topo">
+      <span class="logo__chip"><img src="img/logo-cm.png" alt="" width="558" height="552"></span>
+      <span class="logo__txt">Cassiane Móveis<small>Planejados sob medida</small></span>
+    </a>
+    <div class="ftr__col">
+      <span class="mono ftr__k">WhatsApp</span><a data-wa="ftr" href="#" target="_blank" rel="noopener">(67) 98129-2953</a>
+      <span class="mono ftr__k">Telefone</span><a href="tel:+556734213422">(67) 3421-3422</a>
     </div>
-    <div>
-      <h4>Contato</h4>
-      <ul class="footer__list">
-        <li><svg class="i" aria-hidden="true"><use href="#i-wa"/></svg><a data-wa="footer" href="#" target="_blank" rel="noopener">(67) 98129-2953</a></li>
-        <li><svg class="i" aria-hidden="true"><use href="#i-phone"/></svg><a href="tel:+556734213422">(67) 3421-3422</a></li>
-        <li><svg class="i" aria-hidden="true"><use href="#i-mail"/></svg><a href="mailto:cassianemoveis@hotmail.com.br">cassianemoveis@hotmail.com.br</a></li>
-      </ul>
+    <div class="ftr__col">
+      <span class="mono ftr__k">Endereço</span><a href="https://www.google.com/maps/search/?api=1&amp;query=Rua+General+Os%C3%B3rio+1145+Dourados+MS" target="_blank" rel="noopener">Rua General Osório, 1145<br>Jd. Cuiabazinho · Dourados-MS</a>
     </div>
-    <div>
-      <h4>Endereço</h4>
-      <ul class="footer__list">
-        <li><svg class="i" aria-hidden="true"><use href="#i-pin"/></svg><a href="https://www.google.com/maps/search/?api=1&amp;query=Rua+General+Os%C3%B3rio+1145+Dourados+MS" target="_blank" rel="noopener">Rua General Osório, 1145<br>Jardim Cuiabazinho, Dourados-MS</a></li>
-      </ul>
+    <div class="ftr__col">
+      <span class="mono ftr__k">Redes</span>
+      <a href="https://www.instagram.com/cm_cassiane_moveis/" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.facebook.com/cassianemoveis" target="_blank" rel="noopener">Facebook</a>
     </div>
   </div>
-  <div class="container footer__bottom">
-    <span>© <span id="ano">2026</span> Cassiane Móveis. Todos os direitos reservados.</span>
+  <div class="wrap ftr__bottom">
+    <span>© <span id="ano">2026</span> Cassiane Móveis</span>
     <span class="credit">Criado por <a href="https://criaux.com.br/" target="_blank" rel="noopener">CriaUX</a></span>
   </div>
 </footer>
 
-<a class="wa-float" data-wa="flutuante" href="#" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
-  <svg class="i" aria-hidden="true"><use href="#i-wa"/></svg>
-  <span class="wa-float__bubble">Quer um orçamento? Fale com a gente!</span>
+<a class="fab" data-wa="flutuante" href="#" target="_blank" rel="noopener" aria-label="Pedir orçamento no WhatsApp">
+  <svg class="i" aria-hidden="true"><use href="#i-wa"/></svg><span class="fab__txt">Orçamento</span>
 </a>
-<div class="mbar">
-  <a class="btn btn--wa btn--block" data-wa="barra-mobile" href="#" target="_blank" rel="noopener"><svg class="i" aria-hidden="true"><use href="#i-wa"/></svg><span>Pedir orçamento no WhatsApp</span></a>
-</div>
 
 <dialog class="lb" id="lb" aria-label="Projeto ampliado">
-  <button class="lb__btn lb__close" data-close aria-label="Fechar"><svg class="i" aria-hidden="true"><use href="#i-x"/></svg></button>
-  <button class="lb__btn lb__prev" data-prev aria-label="Anterior"><svg class="i" aria-hidden="true"><use href="#i-chev-l"/></svg></button>
+  <button class="sq lb__x" data-close aria-label="Fechar"><svg class="i" aria-hidden="true"><use href="#i-x"/></svg></button>
+  <button class="sq lb__prev" data-prev aria-label="Anterior"><svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></button>
   <figure class="lb__fig">
     <img id="lbImg" src="" alt="">
-    <figcaption>
-      <span><small id="lbTag"></small><b id="lbCap"></b></span>
-      <a class="btn btn--wa btn--md" id="lbWa" href="#" target="_blank" rel="noopener"><svg class="i" aria-hidden="true"><use href="#i-wa"/></svg><span>Quero um assim</span></a>
+    <figcaption><span><span class="mono" id="lbTag"></span><b id="lbCap"></b></span>
+      <a class="btn btn--wa btn--md" id="lbWa" href="#" target="_blank" rel="noopener"><span class="btn__ico"><svg class="i" aria-hidden="true"><use href="#i-wa"/></svg></span><span class="btn__txt">Quero um assim</span></a>
     </figcaption>
   </figure>
-  <button class="lb__btn lb__next" data-next aria-label="Próximo"><svg class="i" aria-hidden="true"><use href="#i-chev-r"/></svg></button>
+  <button class="sq lb__next" data-next aria-label="Próximo"><svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></button>
 </dialog>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
-  <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M19.05 4.91A9.82 9.82 0 0 0 12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01Zm-7.01 15.24c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.26 8.26 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.83c.01 4.54-3.68 8.23-8.22 8.23Zm4.52-6.16c-.25-.12-1.47-.72-1.690-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43s.17-.25.25-.41c.08-.17.04-.31-.02-.43s-.56-1.34-.76-1.84c-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.22.25-.86.85-.86 2.07s.89 2.4 1.01 2.56c.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18s-.22-.16-.47-.28Z"/></symbol>
-  <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></symbol>
-  <symbol id="i-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="currentColor" opacity=".14"/><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="m7.5 12.5 3 3 6-6.5"/></symbol>
-  <symbol id="i-pin" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
-  <symbol id="i-ruler" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M21.3 15.3a2.4 2.4 0 0 1 0 3.4l-2.6 2.6a2.4 2.4 0 0 1-3.4 0L2.7 8.7a2.41 2.41 0 0 1 0-3.4l2.6-2.6a2.41 2.41 0 0 1 3.4 0ZM14.5 12.5l2-2M11.5 9.5l2-2M8.5 6.5l2-2M17.5 15.5l2-2"/></symbol>
-  <symbol id="i-factory" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M2 20h20M4 20V9l5 3V9l5 3V6l6 3v11M8 16h1M13 16h1M18 16h1"/></symbol>
-  <symbol id="i-spark" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="m12 3 1.9 5.6L19.5 10l-5.6 1.9L12 17.5l-1.9-5.6L4.5 10l5.6-1.4ZM19 17l.7 2 2 .7-2 .7-.7 2-.7-2-2-.7 2-.7Z"/></symbol>
-  <symbol id="i-chat" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2zM8 9h8M8 13h5"/></symbol>
-  <symbol id="i-zoom" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="m21 21-4.3-4.3M11 8v6M8 11h6"/></symbol>
-  <symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2Z"/></symbol>
-  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path fill="none" stroke="currentColor" stroke-width="2" d="m22 7-10 6L2 7"/></symbol>
-  <symbol id="i-ig" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.6" cy="6.4" r="1.2" fill="currentColor"/></symbol>
-  <symbol id="i-fb" viewBox="0 0 24 24"><path fill="currentColor" d="M14 8V6.5c0-.7.5-1 1-1h2V2h-3c-2.8 0-4 2-4 4.3V8H8v3.5h2V22h4V11.5h2.7l.5-3.5Z"/></symbol>
-  <symbol id="i-x" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M6 6l12 12M18 6 6 18"/></symbol>
-  <symbol id="i-chev-l" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="m15 18-6-6 6-6"/></symbol>
-  <symbol id="i-chev-r" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="m9 18 6-6-6-6"/></symbol>
+  <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M19.05 4.91A9.82 9.82 0 0 0 12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01Zm-7.01 15.24c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.26 8.26 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.83c.01 4.54-3.68 8.23-8.22 8.23Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43s.17-.25.25-.41c.08-.17.04-.31-.02-.43s-.56-1.34-.76-1.84c-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.22.25-.86.85-.86 2.07s.89 2.4 1.01 2.56c.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18s-.22-.16-.47-.28Z"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" d="M4 12h15M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" d="M6 6l12 12M18 6 6 18"/></symbol>
 </svg>
 
 <script src="main.js" defer></script>
