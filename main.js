@@ -3,8 +3,7 @@
   const WA_NUMBER = '5567981292953'; // (67) 98129-2953
   const MSG = {
     base: 'Olá, Cassiane Móveis! Vim pelo site e gostaria de um orçamento de móveis planejados.',
-    topic: t => `Olá, Cassiane Móveis! Vim pelo site e gostaria de um orçamento de ${t}.`,
-    project: p => `Olá, Cassiane Móveis! Vi o projeto "${p}" no site e gostaria de algo nessa linha.`,
+    project: p => `Olá, Cassiane Móveis! Vi o projeto "${p}" no site e gostaria de um orçamento de algo parecido.`,
   };
   const waUrl = text => `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(text)}`;
   const track = (where, extra = {}) => {
@@ -13,47 +12,32 @@
     if (typeof window.fbq === 'function') window.fbq('track', 'Contact', { content_name: where });
     if (typeof window.gtag === 'function') window.gtag('event', 'generate_lead', { method: 'whatsapp', cta_location: where });
   };
-  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   document.querySelectorAll('[data-wa]').forEach(a => {
-    const topic = a.dataset.topic;
-    a.href = waUrl(topic ? MSG.topic(topic) : MSG.base);
-    a.addEventListener('click', () => track(a.dataset.wa, topic ? { topic } : {}));
+    a.href = waUrl(MSG.base);
+    a.addEventListener('click', () => track(a.dataset.wa));
   });
 
-  // ===== Header: solid after hero, hide on scroll down =====
-  const hdr = document.querySelector('.hdr');
-  const fab = document.querySelector('.wa-fab');
-  let lastY = 0;
+  // ===== Header shadow + mobile bar =====
+  const header = document.querySelector('.header');
+  const mbar = document.querySelector('.mbar');
   const onScroll = () => {
-    const y = scrollY;
-    hdr.classList.toggle('is-solid', y > innerHeight * 0.75);
-    hdr.classList.toggle('is-hidden', y > lastY && y > innerHeight);
-    fab.classList.toggle('on', y > innerHeight * 0.6);
-    lastY = y;
+    header.classList.toggle('is-scrolled', scrollY > 8);
+    mbar.classList.toggle('on', scrollY > 520);
   };
   addEventListener('scroll', onScroll, { passive: true }); onScroll();
 
-  // ===== Services hover preview =====
-  const prev = document.getElementById('svcPreview');
-  const prevImg = prev.querySelector('img');
-  if (matchMedia('(hover:hover) and (min-width:861px)').matches) {
-    let tx = 0, ty = 0, cx = 0, cy = 0, raf;
-    const loop = () => { cx += (tx - cx) * 0.14; cy += (ty - cy) * 0.14; prev.style.left = cx + 'px'; prev.style.top = cy + 'px'; raf = requestAnimationFrame(loop); };
-    document.querySelectorAll('#svc a').forEach(a => {
-      a.addEventListener('mouseenter', e => { prevImg.src = a.dataset.img; tx = cx = e.clientX; ty = cy = e.clientY; prev.classList.add('on'); cancelAnimationFrame(raf); loop(); });
-      a.addEventListener('mousemove', e => { tx = e.clientX + 170; ty = e.clientY; });
-      a.addEventListener('mouseleave', () => { prev.classList.remove('on'); setTimeout(() => cancelAnimationFrame(raf), 400); });
-    });
-  }
+  // ===== Floating bubble once =====
+  const fl = document.querySelector('.wa-float');
+  setTimeout(() => { fl.classList.add('show'); setTimeout(() => fl.classList.remove('show'), 5000); }, 5000);
 
-  // ===== Portfolio filter =====
-  const grid = document.getElementById('grid');
-  const items = [...grid.querySelectorAll('.w')];
-  document.querySelectorAll('.tab').forEach(t => t.addEventListener('click', () => {
-    document.querySelectorAll('.tab').forEach(x => { x.classList.toggle('is-on', x === t); x.setAttribute('aria-pressed', x === t); });
-    const f = t.dataset.f;
-    grid.classList.toggle('is-filtered', f !== 'all');
+  // ===== Gallery filter =====
+  const gallery = document.getElementById('gallery');
+  const items = [...gallery.querySelectorAll('.g')];
+  document.querySelectorAll('.filter').forEach(b => b.addEventListener('click', () => {
+    document.querySelectorAll('.filter').forEach(x => { x.classList.toggle('is-on', x === b); x.setAttribute('aria-pressed', x === b); });
+    const f = b.dataset.f;
+    gallery.classList.toggle('is-filtered', f !== 'all');
     items.forEach(it => it.classList.toggle('is-hidden', f !== 'all' && it.dataset.cat !== f));
   }));
 
@@ -80,30 +64,15 @@
   lb.addEventListener('touchstart', e => { sx = e.touches[0].clientX; }, { passive: true });
   lb.addEventListener('touchend', e => { const d = e.changedTouches[0].clientX - sx; if (Math.abs(d) > 50) show(cur + (d < 0 ? 1 : -1)); });
 
-  // ===== Brief → WhatsApp =====
-  document.getElementById('briefForm').addEventListener('submit', e => {
-    e.preventDefault();
-    const fd = new FormData(e.target);
-    const amb = fd.getAll('amb'), fase = fd.get('fase');
-    const nome = (fd.get('nome') || '').trim(), bairro = (fd.get('bairro') || '').trim();
-    const lines = [`Olá, Cassiane Móveis!${nome ? ` Meu nome é ${nome}.` : ''} Vim pelo site e gostaria de um orçamento.`];
-    if (amb.length) lines.push(`• Ambientes: ${amb.join(', ')}`);
-    if (fase) lines.push(`• Imóvel: ${fase}`);
-    if (bairro) lines.push(`• Local: ${bairro}`);
-    lines.push('Posso enviar fotos e medidas por aqui.');
-    track('formulario', { ambientes: amb.join('|'), fase: fase || '' });
-    window.open(waUrl(lines.join('\n')), '_blank', 'noopener');
-  });
-
   // ===== Reveal =====
-  const els = document.querySelectorAll('.rv, .w, .facts>div, .svc li');
-  if ('IntersectionObserver' in window && !reduce) {
+  const els = document.querySelectorAll('.head, .story__media, .story__copy, .g, .steps li, .final__box');
+  if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
     els.forEach(el => el.classList.add('rv'));
     const io = new IntersectionObserver(es => es.forEach(en => {
       if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); }
-    }), { rootMargin: '0px 0px -10% 0px' });
+    }), { rootMargin: '0px 0px -8% 0px' });
     els.forEach(el => io.observe(el));
-  } else els.forEach(el => el.classList.add('in'));
+  }
 
   document.getElementById('ano').textContent = new Date().getFullYear();
 })();
