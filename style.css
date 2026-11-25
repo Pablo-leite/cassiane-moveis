@@ -56,7 +56,7 @@ h1,h2{display:flex;flex-direction:column;gap:2px;color:var(--ink)}
 .btn--xl{height:66px;padding:0 34px;font-size:17px}.btn--xl .i{width:24px;height:24px}
 
 /* Barra de informações */
-.info{background:var(--red);color:#fff;font-size:13.5px;font-weight:600}
+.info{background:var(--blue);color:#fff;font-size:13.5px;font-weight:600}
 .info__in{display:flex;justify-content:space-between;align-items:center;gap:16px;height:40px}
 .info span,.info a{display:flex;align-items:center;gap:8px;white-space:nowrap}
 .info .i{width:16px;height:16px}
@@ -181,7 +181,7 @@ h1,h2{display:flex;flex-direction:column;gap:2px;color:var(--ink)}
 .ftr__grid>div:not(.ftr__brand){display:flex;flex-direction:column;gap:6px}
 .ftr h4{font-size:15px;font-weight:700;color:var(--ink);margin-bottom:6px}
 .ftr a:hover{color:var(--red)}
-.ftr__bottom{background:var(--ink);color:rgba(255,255,255,.7);font-size:13.5px}
+.ftr__bottom{background:var(--blue);color:rgba(255,255,255,.7);font-size:13.5px}
 .ftr__bottom-in{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:18px 0}
 .credit a{color:#fff;font-weight:700;border-bottom:2px solid var(--red)}
 @media (max-width:860px){.ftr__grid{grid-template-columns:1fr 1fr}.ftr__brand{grid-column:1/-1}.ftr__bottom{padding-bottom:84px}}
@@ -237,3 +237,4 @@ h1,h2{display:flex;flex-direction:column;gap:2px;color:var(--ink)}
   .stats li:nth-child(n+3){border-top:1px solid var(--line)}
 }
 @media (max-width:520px){.hero__mosaic{grid-template-rows:160px 160px;gap:10px}}
+.cta .btn--red{box-shadow:0 16px 34px -12px rgba(0,0,0,.45)}
