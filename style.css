@@ -85,7 +85,7 @@ h1,h2{display:flex;flex-direction:column;gap:2px;color:var(--ink)}
 .stats{list-style:none;padding:0;margin:56px 0 0;position:relative;z-index:3;display:grid;grid-template-columns:repeat(4,1fr);background:#fff;border-radius:var(--r);box-shadow:var(--sh)}
 .stats li{padding:24px 24px;display:flex;flex-direction:column}
 .stats li+li{border-left:1px solid var(--line)}
-.stats b{font-size:24px;font-weight:800;color:var(--red);letter-spacing:-.02em;line-height:1.2}
+.stats b{font-size:clamp(17px,1.65vw,22px);font-weight:800;color:var(--red);letter-spacing:-.02em;line-height:1.2}
 .stats span{font-size:13.5px;color:var(--muted)}
 @media (max-width:900px){
           .stats{margin:18px 0 0;grid-template-columns:1fr 1fr}
