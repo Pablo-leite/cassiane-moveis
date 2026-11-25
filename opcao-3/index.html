@@ -15,7 +15,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FurnitureStore","name":"Cassiane Móveis","foundingDate":"1993","areaServed":"BR","telephone":"+55-67-98129-2953","paymentAccepted":"Cartão de crédito, cartão de débito, pagamento por aproximação","address":{"@type":"PostalAddress","streetAddress":"Rua General Osório, 1145 - Jardim Cuiabazinho","addressLocality":"Dourados","addressRegion":"MS","addressCountry":"BR"},"sameAs":["https://www.instagram.com/cm_cassiane_moveis/","https://www.facebook.com/cassianemoveis"]}
+{"@context":"https://schema.org","@type":"FurnitureStore","name":"Cassiane Móveis","foundingDate":"1993","areaServed":"BR","telephone":"+55-67-98129-2953","paymentAccepted":"Cartão de crédito, cartão de débito, pagamento por aproximação, Pix, dinheiro, cheque","address":{"@type":"PostalAddress","streetAddress":"Rua General Osório, 1145 - Jardim Cuiabazinho","addressLocality":"Dourados","addressRegion":"MS","addressCountry":"BR"},"sameAs":["https://www.instagram.com/cm_cassiane_moveis/","https://www.facebook.com/cassianemoveis"]}
 </script>
 </head>
 <body>
@@ -50,9 +50,8 @@
 <!-- HERO -->
 <section class="hero">
   <div class="wrap">
-    <div class="hero__box">
-      <img class="hero__img" src="../img/cozinha-cinza.jpg" alt="Cozinha planejada fabricada pela Cassiane Móveis" width="960" height="1280" fetchpriority="high">
-      <div class="hero__card">
+    <div class="hero__grid">
+      <div class="hero__copy">
         <p class="tag">Casa e empresa · Sob medida</p>
         <h1><span class="h1__lead">Móveis planejados</span><span class="h1__key">feitos para durar</span></h1>
         <p class="hero__sub">Há mais de 30 anos projetamos e fabricamos cozinhas, dormitórios, closets, salas e espaços comerciais sob medida, com atendimento em todo o Brasil.</p>
@@ -60,6 +59,12 @@
           <a class="btn btn--red btn--lg" data-wa="hero" href="#" target="_blank" rel="noopener"><svg class="i" aria-hidden="true"><use href="#i-wa"/></svg><span>Solicitar orçamento</span></a>
           <a class="btn btn--line btn--lg" href="#ambientes"><span>Ver ambientes</span></a>
         </div>
+      </div>
+      <div class="hero__mosaic">
+        <figure class="m m--a"><img src="../img/painel-led.jpg" alt="Painel de TV com ripado e LED" width="960" height="1280" fetchpriority="high"></figure>
+        <figure class="m m--b"><img src="../img/cozinha-cinza.jpg" alt="Cozinha planejada fendi" width="960" height="1280"></figure>
+        <figure class="m m--c"><img src="../img/closet.jpg" alt="Closet planejado com LED" width="960" height="1280"></figure>
+        <div class="hero__seal"><img src="../img/logo-cm.png" alt="" width="558" height="552"><span><b>Desde 1993</b><small>Fábrica própria</small></span></div>
       </div>
     </div>
 
@@ -117,6 +122,9 @@
         <span class="chip"><svg class="i" aria-hidden="true"><use href="#i-card"/></svg>Crédito</span>
         <span class="chip"><svg class="i" aria-hidden="true"><use href="#i-card"/></svg>Débito</span>
         <span class="chip"><svg class="i" aria-hidden="true"><use href="#i-nfc"/></svg>Aproximação</span>
+        <span class="chip"><svg class="i" aria-hidden="true"><use href="#i-pix"/></svg>Pix</span>
+        <span class="chip"><svg class="i" aria-hidden="true"><use href="#i-cash"/></svg>Dinheiro</span>
+        <span class="chip"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Cheque</span>
       </div>
     </div>
     <div class="about__media">
@@ -178,7 +186,7 @@
       <details open><summary>Vocês atendem fora de Dourados?</summary><p>Sim. Atendemos clientes em todo o Brasil. Envie sua cidade pelo WhatsApp e explicamos como funciona para a sua região.</p></details>
       <details><summary>Preciso ter a planta do imóvel?</summary><p>Não é obrigatório. Fotos e medidas aproximadas já bastam para começar a conversa.</p></details>
       <details><summary>Fazem móveis para empresas?</summary><p>Sim. Além de residências, fazemos projetos comerciais como balcões e mesas de reunião.</p></details>
-      <details><summary>Quais as formas de pagamento?</summary><p>Aceitamos cartões de crédito, débito e pagamento por aproximação.</p></details>
+      <details><summary>Quais as formas de pagamento?</summary><p>Aceitamos cartão de crédito, débito, pagamento por aproximação, Pix, dinheiro e cheque.</p></details>
       <details><summary>Fazem apenas um móvel?</summary><p>Sim. Fazemos desde uma peça, como um painel de TV, até ambientes completos.</p></details>
     </div>
   </div>
@@ -228,6 +236,9 @@
   <symbol id="i-star" viewBox="0 0 24 24"><path fill="currentColor" d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9Z"/></symbol>
   <symbol id="i-card" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path stroke="currentColor" stroke-width="2" d="M2 10h20M6 15h4"/></symbol>
   <symbol id="i-nfc" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M8.5 8.5a5 5 0 0 1 0 7M12 6a8.5 8.5 0 0 1 0 12M15.5 3.5a12 12 0 0 1 0 17"/></symbol>
+  <symbol id="i-pix" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M12 2.8 21.2 12 12 21.2 2.8 12Z"/><path fill="none" stroke="currentColor" stroke-width="2" d="m7.5 7.5 4.5 4.5 4.5-4.5M7.5 16.5 12 12l4.5 4.5"/></symbol>
+  <symbol id="i-cash" viewBox="0 0 24 24"><rect x="2" y="6" width="20" height="12" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="2.6" fill="none" stroke="currentColor" stroke-width="2"/><path stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M6 12h.01M18 12h.01"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><rect x="2" y="6" width="20" height="12" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M6 14c1.5-2 2.5 1 4-1M13 14h5M6 10h12"/></symbol>
   <symbol id="i-ig" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.6" cy="6.4" r="1.2" fill="currentColor"/></symbol>
 </svg>
 
